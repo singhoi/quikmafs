@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zetamac Game</title>
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+	<link rel="stylesheet" href="public/css/fa.css">
+    <link rel="stylesheet" href="public/css/game.css">
+</head>
+<body>
+    <br><br>
+    <div class = "container" id = "gameDisplay" hidden>
+        <h5 id="timer">Time Left: 10</h5>
+        <h5 id="score">Score: 0</h5>
+    
+        <h1 id="game"> <span id="question">XXX</span> =  <input class="number-input" id="answer" type="number"></h1>
+        <div id="scoreHistory"></div>
+        <input id="restart" type="reset" value="Restart" class="btn btn-secondary">
+
+    </div>
+
+    <br><br>
+
+    <div class = "container">
+
+        <h3>Arithmetic Game</h3>
+        <p>The Arithmetic Game is a fast-paced speed drill where you are given
+        two minutes to solve as many arithmetic problems as you can.
+        </p>
+        <p>Created by Ben, Kevin, and Sam.</p>
+        <form id = "settings" method="POST" action="javascript:void(0);" >
+            <section>
+                <input type="checkbox" name="add" id="add" checked> <label for="add">Addition</label>
+                <div class="form-group mx-sm-3 mb-2">Range: &#40 <input class="number-input"  type="number" name="laddmin" value=2> to <input class="number-input" type="number" value=100 name="laddmax"> &#41 + &#40
+                <input class="number-input" type="number" value=2 name="raddmin"> to <input class="number-input" name="raddmax" type="number" value=100> &#41 </div>
+            </section>
+            <section>
+                <input type="checkbox" name="sub" id="sub" checked> <label for="sub">Subtraction</label>
+                <div class="form-group mx-sm-3 mb-2">Addition problems in reverse</div>
+            </section>
+            <section>
+                <input type="checkbox" name="mul" id="mul" checked> <label for="mul">Multiplication</label>
+                <div class="form-group mx-sm-3 mb-2">Range: &#40 <input class="number-input" type="number" value=2 name="lmulmin"> to <input class="number-input" type="number" value=12 name="lmulmax"> &#41 &#215; &#40
+                <input class="number-input" type="number" value=2 name="rmulmin"> to <input class="number-input" type="number" value=100 name="rmulmax"> &#41 </div>
+            </section>
+            <section>
+                <input type="checkbox" name="div" id="div" checked> <label for="div">Division</label>
+                <div class="form-group mx-sm-3 mb-2">Multiplication problems in reverse</div>
+            </section>
+
+
+            <section>
+                <p >Time Limit in Seconds: <input class="number-input" type="number" value=120 name="timeLimit"></p>
+            </section>
+
+            <button class="btn btn-primary">Start!</button>
+        </form>
+
+    </div>
+
+    
+
+    
+
+    <script src="public/js/game.js"></script>
+    
+
+</body>
+</html>
